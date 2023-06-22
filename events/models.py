@@ -80,3 +80,22 @@ class Conference(models.Model):
 
     class Meta:
         ordering = ("starts", "name")  # Default ordering for Conference
+
+
+# class ConferenceListEncoder(ModelEncoder):
+#     model = Conference
+#     properties = ["name"]
+
+
+# class ConferenceDetailEncoder(ModelEncoder):
+#     model = Conference
+#     properties = [
+#         "name",
+#         "description",
+#         "max_presentations",
+#         "max_attendees",
+#         "starts",
+#         "ends",
+#         "created",
+#         "updated",
+#     ]
