@@ -29,8 +29,8 @@ def get_weather_data(city, state):
     response = requests.get(url)
     try:
         description = json.loads(response.content)["weather"][0]["description"]
-        temp = json.loads(response.content)["main"]["temp"]
-        weather = {"temp": temp, "description": description}
+        temperature = json.loads(response.content)["main"]["temp"]
+        weather = {"temperature": temperature, "description": description}
     except IndexError:
         return None
     return weather

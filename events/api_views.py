@@ -5,6 +5,7 @@ from django.views.decorators.http import require_http_methods
 import json
 from .acls import get_photo, get_weather_data
 
+
 class ConferenceListEncoder(ModelEncoder):
     model = Conference
     properties = ["name"]
