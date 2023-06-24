@@ -26,7 +26,7 @@ class Location(models.Model):
     The Location model describes the place at which an
     Event takes place, like a hotel or conference center.
     """
-
+    photo = models.TextField(null=True)
     name = models.CharField(max_length=200)
     city = models.CharField(max_length=200)
     room_count = models.PositiveSmallIntegerField()
